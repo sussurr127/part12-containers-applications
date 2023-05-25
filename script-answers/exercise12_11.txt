@@ -1,0 +1,185 @@
+Script started on 2023-05-24 17:03:49+08:00 [TERM="xterm-256color" TTY="/dev/pts/11" COLUMNS="132" LINES="10"]
+[oh-my-zsh] Random theme 'blinks' loaded
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/code/part12-containers-applications[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m [K[123C![1m[36m132[39m[49m[0m[127D[?1h=[?2004hdded docker[?1l>[?2004l
+]2;docker]1;docker
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.10.4)
+  compose*    Docker Compose (Docker Inc., v2.17.3)
+  container   Manage containers
+  context     Manage contexts
+  dev*        Docker Dev Environments (Docker Inc., v0.1.0)
+  extension*  Manages Docker extensions (Docker Inc., v0.2.19)
+  image       Manage images
+  init*       Creates Docker-related starter files for your project (Docker Inc., v0.1.0-beta.4)
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.26.0)
+  scout*      Command line tool for Docker Scout (Docker Inc., v0.10.0)
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/sussurr/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default
+                           context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/sussurr/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/sussurr/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/sussurr/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/code/part12-containers-applications[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m [K[123C![1m[36m133[39m[49m[0m[127D[?1h=[?2004hddocker ps[?1l>[?2004l
+]2;docker ps]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                     NAMES
+74425681f88c   redis     "docker-entrypoint.s…"   25 minutes ago   Up 23 minutes   0.0.0.0:6379->6379/tcp    todo-backend-redis-1
+55e0709e1fb8   mongo     "docker-entrypoint.s…"   8 hours ago      Up 23 minutes   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/code/part12-containers-applications[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m [K[123C![1m[36m134[39m[49m[0m[127D[?1h=[?2004hddocker exec -it re
+[0mread                                            RemoteSystemToastIcon.png                     
+readlink                                        RemoteWipeCSP.dll                             
+READNULLCMD                                     RemovableMediaProvisioningPlugin.dll          
+readonly                                        RemoveDeviceContextHandler.dll                
+readprofile                                     RemoveDeviceElevated.dll                      
+ReAgentc.exe                                    Remove.Microsoft.AppV.AppvClientWmi.mof       
+ReAgent.dll                                     removerootporterr.mof                         
+ReAgentTask.dll                                 remove-shell                                  
+[Jrealpath                                        [JrendezvousSession.tlb                         [J
+reboot                                          [Jrenice                                        [J
+recdisc.exe                                     [Jrepair-bde.exe                                [J
+recover.exe                                     [Jrepdrvfs.dll                                  [J
+Recovery                                        [Jrepeat                                        [J
+recovery.dll                                    [Jreplace.exe                                   [J
+RecoveryDrive.exe                               [JReportingCSP.dll                              [J
+refs.mof                                        [JRepository                                    [J
+refsutil.exe                                    [JRESAMPLEDMO.DLL                               [J
+refsv1.mof                                      [JResBParser.dll                                [J
+regapi.dll                                      [Jrescache                                      [J
+RegCtrl.dll                                     [Jreset                                         [J
+regedit.exe                                     [Jreset_color                                   [J
+regedt32.exe                                    [Jreseteng.dll                                  [J
+regevent.mof                                    [JResetEngine.dll                               [J
+reg.exe                                         [JResetEngine.exe                               [J
+regexp-replace                                  [JResetEngOnline.dll                            [J
+regid.2010-01.com.zerotier_ZeroTierOne.swidtag  [Jreset.exe                                     [J
+regidle.dll                                     [Jresize2fs                                     [J
+regini.exe                                      [Jresizepart                                    [J
+Register-CimProvider.exe                        [Jresmon.exe                                    [J
+Registration                                    [Jresolvectl                                    [J
+Registry.format.ps1xml                          [JResourceMapper.dll                            [J
+regsvc.dll                                      [JResourcePolicyClient.dll                      [J
+regsvr32.exe                                    [JResourcePolicyServer.dll                      [J
+reguwpapi.dll                                   [JResources                                     [J
+rehash                                          [JResPriHMImageList                             [J
+ReInfo.dll                                      [JResPriHMImageListLowCost                      [J
+rekeywiz.exe                                    [JResPriImageList                               [J
+relog.exe                                       [JResPriImageListLowCost                        [J
+RelPost.exe                                     [JResPriLMImageList                             [J
+RemoteAppLifetimeManager.exe                    [JResPriUHMImageList                            [J
+RemoteAppLifetimeManagerProxyStub.dll           [JRestartManager.mof                            [J
+remoteaudioendpoint.dll                         [JRestartManagerUninstall.mof                   [J
+RemotePackages                                  [Jrestore                                       [J
+remotepg.dll                                    [Jresutils.dll                                  [J
+RemotePosWorker.exe                             [Jreturn                                        [J
+remotesp.tsp                                    [Jrev                                           [J
+RemoteSystemToastIcon.contrast-white.png        [J                                              
+[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m docker exec -it re[K[105C![1m[36m134[39m[49m[0m[109D  
+zsh: do you wish to see all 8025 possibilities (8025 lines)? n[J[A[0m[27m[24m[0m[39m[49m[4Cdocker exec -it[K[108C![1m[36m134[39m[49m[0m[0m[39m[49m[111Dtodo-backend-mongo-1 bash     bash                               ps[?1l>[?2004l
+[J]2;docker ps]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                     NAMES
+74425681f88c   redis     "docker-entrypoint.s…"   26 minutes ago   Up 24 minutes   0.0.0.0:6379->6379/tcp    todo-backend-redis-1
+55e0709e1fb8   mongo     "docker-entrypoint.s…"   8 hours ago      Up 24 minutes   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/code/part12-containers-applications[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m [K[123C![1m[36m134[39m[49m[0m[127D[?1h=[?2004hddockr er exec -it to
+[01;34mtodo-app[0m/               tokenbinding.dll        TokenBroker.dll         Tools                   touch                 
+[Jtoe                     [JTokenBrokerCookies.exe  [JTokenBrokerUI.dll       [Jtop                     [J                      [A[A[0m[27m[24m[0m[39m[49m[4Cdocker exec -it to[K[105C![1m[36m134[39m[49m[0m[0m[39m[49m[109Ddo-b
+[J[A[26Cack         75 bash[?1l>[?2004l
+[J]2;docker exec -it 75 bash]1;dockerError response from daemon: No such container: 75
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/code/part12-containers-applications[0m[27m[24m[J[39m[49m[0m
+[40m[1m[40m[32msussurr[1m[32m[40m[34m@[1m[34m[40m[36mMicrosoftPhone[1m[36m[40m[32m [0m[32m[40m[33m[40m~/code/part12-containers-applications[1m[33m[40m[32m [[1m[32m[40m[34mmain [31m*[39m[49m[0m[39m[49m[0m[40m[1m[40m[32m][K[39m[49m[0m
+[40m[34m±[39m[49m[0m[40m %[39m[49m[0m [K[123C![1m[36m135[39m[49m[0m[127D[?1h=[?2004hdocker exec -it 75 bash bash 4 bash[?1l>[?2004l
+]2;docker exec -it 74 bash]1;docker[?2004hroot@74425681f88c:/data# [7mKEYS [27mKEYS 
+[?2004lbash: KEYS: command not found
+[?2004hroot@74425681f88c:/data# [7mredis-cli[27mredis-cli
+[?2004l127.0.0.1:6379> [0K127.0.0.1:6379> K[17C[0K127.0.0.1:6379> KE[18C[0K127.0.0.1:6379> KEY[19C[0K127.0.0.1:6379> KEYS[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS [21C
+(error) ERR wrong number of arguments for 'keys' command
+127.0.0.1:6379> [0K127.0.0.1:6379> K[17C[0K127.0.0.1:6379> KE[18C[0K127.0.0.1:6379> KEY[19C[0K127.0.0.1:6379> KEYS[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS p[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS p[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS pa[0;90;49m [0m[23C[0K127.0.0.1:6379> KEYS pat[0;90;49m [0m[24C[0K127.0.0.1:6379> KEYS patt[0;90;49m [0m[25C[0K127.0.0.1:6379> KEYS patte[0;90;49m [0m[26C[0K127.0.0.1:6379> KEYS patter[0;90;49m [0m[27C[0K127.0.0.1:6379> KEYS pattern[0;90;49m [0m[28C[0K127.0.0.1:6379> KEYS pattern[28C
+(empty array)
+127.0.0.1:6379> [0K127.0.0.1:6379> KEYS pattern[0;90;49m [0m[28C[0K127.0.0.1:6379> KEYS patter[0;90;49m [0m[27C[0K127.0.0.1:6379> KEYS patte[0;90;49m [0m[26C[0K127.0.0.1:6379> KEYS patt[0;90;49m [0m[25C[0K127.0.0.1:6379> KEYS pat[0;90;49m [0m[24C[0K127.0.0.1:6379> KEYS pa[0;90;49m [0m[23C[0K127.0.0.1:6379> KEYS p[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS t[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS to[0;90;49m [0m[23C[0K127.0.0.1:6379> KEYS tod[0;90;49m [0m[24C[0K127.0.0.1:6379> KEYS todo[0;90;49m [0m[25C[0K127.0.0.1:6379> KEYS todos[0;90;49m [0m[26C[0K127.0.0.1:6379> KEYS todos[26C
+(empty array)
+127.0.0.1:6379> [0K127.0.0.1:6379> KEYS todos[0;90;49m [0m[26C[0K127.0.0.1:6379> KEYS todo[0;90;49m [0m[25C[0K127.0.0.1:6379> KEYS tod[0;90;49m [0m[24C[0K127.0.0.1:6379> KEYS to[0;90;49m [0m[23C[0K127.0.0.1:6379> KEYS t[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS *[0;90;49m [0m[22C[0K127.0.0.1:6379> KEYS *[22C
+1) "added_todos"
+127.0.0.1:6379> [0K127.0.0.1:6379> G[17C[0K127.0.0.1:6379> GE[18C[0K127.0.0.1:6379> GET[0;90;49m key[0m[19C[0K127.0.0.1:6379> GET [0;90;49mkey[0m[20C[0K127.0.0.1:6379> GET a[0;90;49m [0m[21C[0K127.0.0.1:6379> GET ad[0;90;49m [0m[22C[0K127.0.0.1:6379> GET add[0;90;49m [0m[23C[0K127.0.0.1:6379> GET adde[0;90;49m [0m[24C[0K127.0.0.1:6379> GET added[0;90;49m [0m[25C[0K127.0.0.1:6379> GET added_[0;90;49m [0m[26C[0K127.0.0.1:6379> GET added_t[0;90;49m [0m[27C[0K127.0.0.1:6379> GET added_to[0;90;49m [0m[28C[0K127.0.0.1:6379> GET added_tod[0;90;49m [0m[29C[0K127.0.0.1:6379> GET added_todo[0;90;49m [0m[30C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+"113"
+127.0.0.1:6379> [0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[30C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[29C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[28C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[27C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[26C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[25C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[24C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[23C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[22C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[21C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[20C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[19C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[18C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[17C[0K127.0.0.1:6379> ET added_todos[16C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[17C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[18C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[19C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[20C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[21C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[22C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[23C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[24C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[25C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[26C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[27C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[28C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[29C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[30C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[31C[0K127.0.0.1:6379> SET added_todos [0;90;49mvalue [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|K[0m[32C[0K127.0.0.1:6379> SET added_todos 9[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KEEPT[0m[33C[0K127.0.0.1:6379> SET added_todos 90[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KEEP[0m[34C[0K127.0.0.1:6379> SET added_todos 900[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KEE[0m[35C[0K127.0.0.1:6379> SET added_todos 9001[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KE[0m[36C[0K127.0.0.1:6379> SET added_todos 9001[36C
+OK
+127.0.0.1:6379> [0K127.0.0.1:6379> SET added_todos 9001[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KE[0m[36C[0K127.0.0.1:6379> [16C[0K127.0.0.1:6379> SET added_todos 9001[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds|PXAT unix-time-milliseconds|KE[0m[36C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> KEYS *[0;90;49m [0m[22C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[30C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[29C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[28C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[27C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[26C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[25C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[24C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[23C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[22C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[21C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[20C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[19C[0K127.0.0.1:6379> GE added_todos[18C[0K127.0.0.1:6379> G added_todos[17C[0K127.0.0.1:6379>  added_todos[16C[0K127.0.0.1:6379> D added_todos[17C[0K127.0.0.1:6379> DE added_todos[18C[0K127.0.0.1:6379> DEL added_todos[0;90;49m [key ...][0m[19C[0K127.0.0.1:6379> DEL added_todos[0;90;49m [key ...][0m[31C[0K127.0.0.1:6379> DEL added_todos[31C
+(integer) 1
+127.0.0.1:6379> [1m[7m%[27m[1m[0m                                                                                                                                    ]2;sussurr@MicrosoftPhone:~/code/part12-containers-applications]1;..-applications]7;file://MicrosoftPhone/home/sussurr/cod
